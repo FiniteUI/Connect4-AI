@@ -11,7 +11,7 @@ class AI:
     LOG_SCORES = False
 
     WIN_SCORE = 1000
-    LOSE_SCORE = -10000
+    LOSE_SCORE = -5000
     TIE_SCORE = 0
     OPEN_TWO_SCORE = 10
     DOUBLE_OPEN_TWO_SCORE = 50
@@ -103,9 +103,9 @@ class AI:
         else:
             if game.complete:
                 if game.winner == self.player:
-                    score = 1000
+                    score = AI.WIN_SCORE
                 elif game.winner == self.enemy:
-                    score = -5000
+                    score = -AI.LOSE_SCORE
                 else:
                     score = 0
             else:
