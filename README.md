@@ -28,11 +28,11 @@ I would like to keep working on this in the future, to see if I can speed the pr
 I will also be looking at trying to implement the perfect Connect 4 AI mentioned above.
 
 The files contained in this repository are as follows:
-Connect4.py - This is my implementation of the game Connect 4 for the AI to play.
-TestConnect4.py - This uses the Connect4.py script to run a game of Connect 4 on the console.
-AI.py - This is the implementation of the AI itself.
-TestAI.py - This creates an instance of the AI and allows the player to play against it on the console.
-TestAIAgainstItself.py - This runs two instances of the AI against eachother.
+1. Connect4.py - This is my implementation of the game Connect 4 for the AI to play.
+2. TestConnect4.py - This uses the Connect4.py script to run a game of Connect 4 on the console.
+3. AI.py - This is the implementation of the AI itself.
+4. TestAI.py - This creates an instance of the AI and allows the player to play against it on the console.
+5. TestAIAgainstItself.py - This runs two instances of the AI against eachother.
 
 Here is the output of a game played with TestAI.py:
 [GameOutput.txt](https://github.com/FiniteUI/Connect4/files/10297855/GameOutput.txt)
