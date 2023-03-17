@@ -64,6 +64,8 @@ class AI:
 
                 if thisGame.winner is None:
                     branchScore, tempColumn = self.branch(thisGame, level + 1)
+                    #if level == 0:
+                    #    print((f'Level: {level}, Branch: {i}, Score: {score}, Branch Score: {branchScore}, Final Score: {score + branchScore}'))
                     score += branchScore
                 else:
                     max = score
@@ -77,6 +79,9 @@ class AI:
                         #us, we know if we win, we will pick this, so we can stop
                         if thisGame.winner == self.player:
                             break
+                
+                #if level == 0:
+                #    print((f'Level: {level}, Branch: {i}, Score: {score}'))
 
                 if game.player == self.player:
                     if score > max:
@@ -86,7 +91,8 @@ class AI:
                     #assume enemy will make the wors move for you
                     if score < max:
                         max = score
-                        column = 1
+                        #column = 1
+                        column = i
                 
         else:
             max = 0
@@ -105,7 +111,7 @@ class AI:
                 if game.winner == self.player:
                     score = AI.WIN_SCORE
                 elif game.winner == self.enemy:
-                    score = -AI.LOSE_SCORE
+                    score = AI.LOSE_SCORE
                 else:
                     score = 0
             else:

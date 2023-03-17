@@ -4,6 +4,8 @@ import time
 
 GAME = Connect4()
 ai = AI(GAME, 2)
+#AI.MOVES_AHEAD = 5
+
 print(GAME)
 while(not GAME.complete):
     ready = False
