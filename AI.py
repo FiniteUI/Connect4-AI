@@ -31,12 +31,14 @@ class AI:
 
         self.scores = {}
     
-    def turn(self):
+    def turn(self, show = False):
         if not self.game.complete:
             score, move = self.branch(self.game, 0)
             if move == -1:
                 move = self.game.validMoves[random.randrange(0, len(self.game.validMoves), 1)]
-            print(f"Player {self.player} moving {move}, score {score}")
+            
+            if show:
+                print(f"Player {self.player} moving {move}, score {score}")
             self.game.move(move)
 
     def branch(self, game, level):
